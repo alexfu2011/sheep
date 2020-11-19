@@ -24,7 +24,7 @@ public class AppTest
         String people = "{\"name\":\"John\"}";
         JSONObject json = JSON.FromString(people);
         assertEquals("John", json.getString("name"));
-        assertEquals(0, json.getInt("age"));
+        assertEquals(null, json.getInteger("age"));
     }
 
     /**

@@ -43,7 +43,7 @@ HTTPClient 用以网络上提交数据，例如，微信小程序登录：
 	        String people = "{\"name\":\"John\"}";
 	        JSONObject json = JSON.FromString(people);
 	        assertEquals("John", json.getString("name"));
-	        assertEquals(0, json.getInt("age"));
+	        assertEquals(null, json.getInteger("age"));
 	    }
 	
 	    /**

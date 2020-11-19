@@ -23,17 +23,17 @@ public class JSONObject {
 		try {
 			value = jsonObject.getString(key);
 		} catch (NullPointerException e) {
-			value = "";
+			value = null;
 		}
 		return value;
 	}
 	
-	public int getInt(String key) {
-		int value;
+	public Integer getInteger(String key) {
+		Integer value;
 		try {
-			value = jsonObject.getInt(key);
+			value = Integer.valueOf(jsonObject.getInt(key));
 		} catch (NullPointerException e) {
-			value = 0;
+			value = null;
 		}
 		return value;
 	}
@@ -43,7 +43,7 @@ public class JSONObject {
 		try {
 			value = jsonObject.getBoolean(key);
 		} catch (NullPointerException e) {
-			value = false;
+			value = null;
 		}
 		return value;
 	}
@@ -53,7 +53,7 @@ public class JSONObject {
 		try {
 			value = jsonObject.isNull(key);
 		} catch (NullPointerException e) {
-			value = false;
+			value = null;
 		}
 		return value;
 	}
