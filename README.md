@@ -53,7 +53,7 @@ HTTPClient 用以网络上提交数据，例如，微信小程序登录：
 	    public void testWriter()
 	    {
 	        try (
-	    		FileWriter writer = new FileWriter("C:\\json.txt");
+	            FileWriter writer = new FileWriter("C:\\json.txt");
 	            JSONWriter jsonWriter = JSON.createWriter(writer);
 	        )
 	        {
