@@ -6,6 +6,7 @@ import java.io.FileWriter;
 
 import org.junit.Test;
 
+import com.shaun.sheep.security.PasswordHash;
 import com.shaun.sheep.json.JSON;
 import com.shaun.sheep.json.JSONObject;
 import com.shaun.sheep.json.JSONWriter;
@@ -15,6 +16,22 @@ import com.shaun.sheep.json.JSONWriter;
  */
 public class AppTest 
 {
+    
+    /**
+     * 密码验证
+     */
+    @Test
+    public void testPasswordHash()
+    {
+		try {
+	    	String hashedPassword = PasswordHash.createHash("123456");
+	    	boolean validate = PasswordHash.validatePassword("123456", hashedPassword);
+	        assertEquals(true, validate);
+		} catch (Exception e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+    }
+    
     /**
      * 读取 JSON 字符串
      */

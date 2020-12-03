@@ -79,14 +79,21 @@ HTTPClient 用以网络上提交数据，例如，微信小程序登录：
 	
 	}
 
-
-
 ## mvn 如何执行主程序？
 
 执行主程序：
 
-	mvn -q clean compile exec:java -Dexec:java -Dexec.mainClass="com.builder.durid.App"
+	mvn -q clean compile exec:java -Dexec:java -Dexec.mainClass="com.shaun.sheep.App"
 
 执行带参数的主程序：
 
-	mvn -q clean compile exec:java -Dexec:java -Dexec.mainClass="com.builder.durid.App" -Dexec.args="myArg1 myArg2"
+	mvn -q clean compile exec:java -Dexec:java -Dexec.mainClass="com.shaun.sheep.App" -Dexec.args="myArg1 myArg2"
+
+## 如何使用新版 JDK 运行 Eclipse？
+
+打开 eclipse.ini，在 openFile 后面一行添加：
+
+	-vm
+	C:\Program Files\Java\jdk-15.0.1\bin\javaw.exe
+
+这样的好处是不需要重新配置环境变量。
